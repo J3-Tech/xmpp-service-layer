@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "commander": "latest",
+    "xml2json": "latest",
+    "colors": "latest"
+  },
+  "name": "JSL",
+  "private": true, 
+  "version": "0.0.0",
+  "description": "JSON interface for XMPP",
+  "keywords": [],
+  "scripts": {
+    "start": "node app.js",
+    "debug": "node debug app.js",
+    "postinstall":"node dep.js"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:chellem/JsonServiceLayer.git"
+  },
+  "author": "Dickriven Chellemboyee",
+  "license": ""
+}
