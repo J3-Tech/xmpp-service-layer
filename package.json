@@ -1,8 +1,15 @@
 {
   "dependencies": {
+    "colors": "latest",
     "commander": "latest",
+    "npm": "latest",
     "xml2json": "latest",
-    "colors": "latest"
+    "mocha":"latest",
+    "should":"latest",
+    "sinon":"latest",
+    "istanbul": "latest",
+    "jshint":"latest",
+    "jscs": "latest"
   },
   "name": "JSL",
   "private": true, 
@@ -12,7 +19,12 @@
   "scripts": {
     "start": "node app.js",
     "debug": "node debug app.js",
-    "postinstall":"node dep.js"
+    "postinstall":"node dep.js",
+    "lint": "./node_modules/.bin/jshint . --reporter=.",
+    "checkStyle": "./node_modules/.bin/jscs .",
+    "pretest": "npm run-script lint && npm run-script checkStyle",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec -r should",
+    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage"
   },
   "main": "app.js",
   "repository": {

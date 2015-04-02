@@ -7,7 +7,7 @@ program
   .option('-T, --no-tests', 'ignore test hook')
 
 program
-  .command('setup [env]')
+  .command('listen [port]')
   .description('run setup commands for all envs')
   .option("-s, --setup_mode [mode]", "Which setup mode to use")
   .action(function(env, options){
@@ -17,10 +17,8 @@ program
   });
 
 program
-  .command('exec <cmd>')
-  .alias('ex')
-  .description('execute the given remote cmd')
-  .option("-e, --exec_mode <mode>", "Which exec mode to use")
+  .command('install-service')
+  .description('install as service')
   .action(function(cmd, options){
     console.log('exec "%s" using %s mode', cmd, options.exec_mode);
   }).on('--help', function() {
