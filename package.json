@@ -4,6 +4,7 @@
     "commander": "latest",
     "npm": "latest",
     "xml2json": "latest",
+    "js2xmlparser":"latest",
     "mocha":"latest",
     "should":"latest",
     "sinon":"latest",
