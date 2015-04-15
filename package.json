@@ -20,7 +20,7 @@
   "scripts": {
     "start": "node app.js",
     "debug": "node debug app.js",
-    "postinstall":"node dep.js",
+    "postinstall":"node Utils/dep.js",
     "lint": "./node_modules/.bin/jshint . --reporter=.",
     "checkStyle": "./node_modules/.bin/jscs .",
     "pretest": "npm run-script lint && npm run-script checkStyle",

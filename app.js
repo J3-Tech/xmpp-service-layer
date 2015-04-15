@@ -15,7 +15,6 @@ program
 program
   .command('install-service')
   .description('install as service')
-  .option("-s, --mode <mode>", "Which setup mode to use")
   .action(function(cmd, options){
     console.log(options);
   }).on('--help', function() {
