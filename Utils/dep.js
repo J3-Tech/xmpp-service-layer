@@ -1,6 +1,6 @@
 var npm = require("npm");
 var colors=require('colors');
-var environment=require('./modules/environment');
+var environment=require('../modules/environment');
 
 var dep=environment.platform();
 

@@ -18,11 +18,11 @@ Listener.prototype = {
 
             sock.on('data', function(data) {
                 console.log('DATA ' + sock.remoteAddress + ': ' + data);
-                sock.write('You said "' + data + '"');
-                var Parser = require('./../Parser/State/JsonParser.js').Parser;
-                console.log(new Parser(data).toXml());
+                sock.write('You said: ' + data);
+                var Parser = require('./../Parser/State/XmlParser.js').Parser;
+                console.log(new Parser(data.toString()).toJson());
             });
-            
+
             sock.on('close', function(data) {
                 console.log('CLOSED: ' + sock.remoteAddress +' '+ sock.remotePort);
             });
